@@ -1,0 +1,452 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ga+Maamli&display=swap");
+* {
+  font-family: inter;
+}
+
+.header_section {
+  box-sizing: border-box;
+  padding: 30px 20px;
+  background-color: #2F3645;
+}
+.header_section nav .logo {
+  font-size: 28px;
+  font-weight: 600;
+  color: #EEEDEB;
+  transition: all 0.5s ease;
+  transform: translate(20px, 0px);
+  /* transition: all 2s ease; */
+  /* transition: transform  2s ease, height  2s ease; */
+  /* transition: transform 2s cubic-bezier(0.3, 1.34, 0.57, -0.4), height 2s ease; */
+  animation: first_animation 20s infinite;
+  border-radius: 5px;
+}
+.header_section nav .logo:hover {
+  transform: scale(1.1);
+  /* .transform:hover{
+      transform: translate(20px, 50px);
+      transform: scale(0.9);
+      transform: rotate(300deg);
+      height: 700px;
+      transform: skew(60deg);
+  }  */
+}
+@keyframes first_animation {
+  0% {
+    top: 20px;
+    right: 90px;
+  }
+  25% {
+    top: 20px;
+    right: 90px;
+  }
+  50% {
+    top: 20px;
+    right: 90px;
+    transform: rotate(300deg);
+  }
+  75% {
+    top: 20px;
+    right: 90px;
+  }
+  100% {
+    right: 90px;
+  }
+}
+.header_section nav .main_nav {
+  flex-grow: 0;
+}
+.header_section nav .main_nav a {
+  font-size: 20px;
+  font-weight: 400;
+  color: #EEEDEB;
+  padding-bottom: 5px;
+  border-bottom: 1px solid transparent;
+}
+.header_section nav .main_nav a:hover {
+  border-bottom-color: #E6B9A6;
+}
+.header_section nav .main_nav a svg {
+  margin-right: 5px;
+}
+
+.hero_section {
+  min-height: 60vh;
+}
+.hero_section h1 {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 70px;
+  color: #000;
+}
+.hero_section h1 span {
+  font-family: "Ga Maamli", sans-serif;
+  color: #102C57;
+}
+.hero_section h1 .text-left,
+.hero_section h1 .text-right {
+  opacity: 0;
+  animation-duration: 10s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+.hero_section h1 .text-left {
+  color: #939185;
+  animation-name: slide-in-left;
+  animation-delay: 1s;
+  /* Adjust delay to control timing */
+}
+.hero_section h1 .text-right {
+  color: #2F3645;
+  animation-name: slide-in-right;
+  animation-delay: 2s;
+  /* Adjust delay to control timing */
+}
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.hero_section p {
+  font-size: 18px;
+  font-weight: 500;
+  color: #2F3645;
+  margin: 30px 0px;
+}
+.hero_section a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.about_section {
+  background-image: url("https://media.istockphoto.com/id/1189377184/vector/mobile-apps-creation-of-a-mobile-application-web-page-created-from-separate-blocks-user.jpg?s=612x612&w=0&k=20&c=PqdUndWPh0bvCQ8sXctahDE0kdkERfRizThl1IByWjc=");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100PX 0PX;
+}
+.about_section .container img {
+  width: 80%;
+  border-radius: 200px;
+  opacity: 0.2;
+}
+.about_section .container h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #EEEDEB;
+  -webkit-text-decoration: 2px dotted underline rgb(247, 223, 223);
+          text-decoration: 2px dotted underline rgb(247, 223, 223);
+}
+.about_section .container h3 {
+  font-family: "Ga Maamli", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: #EEEDEB;
+}
+.about_section .container p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #EEEDEB;
+}
+.about_section .container .social_icons {
+  max-width: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+.about_section .container .social_icons a {
+  color: #EEEDEB;
+  text-decoration: none;
+  font-size: 50px;
+  transition: all 0.4s ease;
+}
+.about_section .container .social_icons a:hover {
+  color: #E6B9A6;
+}
+
+.experience_section {
+  padding: 100px 0px;
+  background-color: rgb(209, 209, 207);
+}
+.experience_section .container .sub_header {
+  margin-bottom: 40px;
+}
+.experience_section .container .sub_header .text {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.experience_section .container .sub_header .text .text-center {
+  border-radius: 10px;
+  padding: 10px 10px;
+  width: 90%;
+  background-color: #000;
+}
+.experience_section .container .sub_header .text .text-center:hover {
+  background-color: #ffffff;
+  color: #000;
+}
+.experience_section .container .sub_header .text .text-center a {
+  text-decoration: none;
+  text-align: center;
+  color: #ffffff;
+}
+.experience_section .container .sub_header .text .text-center a:hover {
+  color: #000;
+}
+.experience_section .container .cs_row {
+  gap: 20px;
+  justify-content: space-between;
+}
+.experience_section .container .cs_row .exp_box {
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+  transition: all 400ms ease;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 30px 30px 70px #2F3645;
+}
+.experience_section .container .cs_row .exp_box:hover {
+  box-shadow: 10px 10px 20px #E6B9A6;
+}
+.experience_section .container .cs_row .exp_box svg {
+  margin-right: 20px;
+}
+.experience_section .container .cs_row .exp_box h3 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #2F3645;
+  font-family: "Ga Maamli", sans-serif;
+}
+.experience_section .container .cs_row .exp_box h4 {
+  font-size: 24px;
+  font-weight: 400;
+}
+.experience_section .container .cs_row .exp_box ul {
+  font-size: 18px;
+  font-weight: 400;
+  color: #2F3645;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+.experience_section .container .cs_row .inner .inner_div {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 30px;
+  transition: all 400ms ease;
+  box-shadow: 10px 10px 20px #2F3645;
+}
+.experience_section .container .cs_row .inner .inner_div:hover {
+  box-shadow: 10px 10px 20px #E6B9A6;
+}
+.experience_section .container .cs_row .inner .inner_div h3 {
+  font-family: "Ga Maamli", sans-serif;
+}
+.experience_section .container .cs_row .inner .inner_div h3 svg {
+  margin-right: 20px;
+}
+.experience_section .container .cs_row .inner .inner_div ul {
+  list-style: none;
+  padding: 0;
+}
+.experience_section .container .cs_row .inner .inner_div ul li {
+  display: inline-block;
+  background-color: #2F3645;
+  color: #ffffff;
+  padding: 6px 10px;
+  border-radius: 3px;
+  margin: 5px;
+}
+
+.projets_section {
+  padding: 100px 0px;
+}
+.projets_section .container {
+  background-color: #000;
+  border-radius: 10px;
+}
+.projets_section .container .headings {
+  margin: 40px 0px;
+}
+.projets_section .container .headings .first_div {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #2F3645;
+  border-radius: 10px;
+}
+.projets_section .container .headings .first_div h4 {
+  color: white;
+}
+.projets_section .container .headings .first_div svg {
+  color: white;
+}
+.projets_section .container .headings .second_div {
+  margin: 20px 0px;
+  padding: 20px 5px;
+  text-align: center;
+  background-color: #2F3645;
+  border-radius: 10px;
+  box-shadow: 10px 10px 20px #ffffff;
+}
+.projets_section .container .headings .second_div:hover {
+  box-shadow: 10px 10px 20px #E6B9A6;
+}
+.projets_section .container .headings .second_div h4 {
+  color: white;
+}
+.projets_section .container .headings .second_div h4 svg {
+  margin-right: 20px;
+}
+.projets_section .container .headings .second_div ul {
+  list-style: none;
+}
+.projets_section .container .headings .second_div ul a {
+  text-decoration: none;
+  color: #EEEDEB;
+}
+.projets_section .container .headings .third_div {
+  text-align: center;
+  /* Light mode styles */
+  /* Dark mode styles when checkbox is checked */
+}
+.projets_section .container .headings .third_div .toggle {
+  display: none;
+}
+.projets_section .container .headings .third_div .toggle-label {
+  display: inline-block;
+  cursor: pointer;
+  background-color: #ddd;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 5px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.projets_section .container .headings .third_div body {
+  background-color: white;
+  color: black;
+}
+.projets_section .container .headings .third_div .toggle-label {
+  background-color: #ddd;
+  color: black;
+}
+.projets_section .container .headings .third_div .toggle:checked ~ .content {
+  background-color: #333;
+  color: white;
+}
+.projets_section .container .headings .third_div .toggle:checked ~ .toggle-label {
+  background-color: #555;
+  color: white;
+}
+.projets_section .container .cards_holder {
+  margin: 20px 0px;
+}
+.projets_section .container .cards_holder .first_div {
+  margin: 20px 0px;
+  padding: 20px 5px;
+  text-align: center;
+  background-color: #2F3645;
+  border-radius: 10px;
+  color: #ffffff;
+  box-shadow: 16px 0px 2px 4px #ffffff;
+}
+.projets_section .container .cards_holder .first_div:hover {
+  box-shadow: 10px 10px 20px #E6B9A6;
+}
+.projets_section .container .cards_holder .first_div svg {
+  margin-right: 20px;
+}
+.projets_section .container .cards_holders {
+  margin: 20px 0px;
+}
+.projets_section .container .cards_holders .first_div {
+  margin: 20px 0px;
+  padding: 20px 5px;
+  text-align: center;
+  background-color: #2F3645;
+  border-radius: 10px;
+  color: #ffffff;
+  box-shadow: 10px 10px 20px #ffffff;
+}
+.projets_section .container .cards_holders .first_div:hover {
+  box-shadow: 10px 10px 20px #E6B9A6;
+}
+.projets_section .container .cards_holders .first_div svg {
+  margin-right: 20px;
+}
+
+.tes_section {
+  padding: 30px 0px;
+  background-color: #ffffff;
+}
+.tes_section .container .header p {
+  font-family: "Ga Maamli", sans-serif;
+}
+
+.enroll_form {
+  padding: 100px 0px;
+  background-color: rgb(221, 218, 218);
+}
+.enroll_form .form {
+  box-sizing: border-box;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 10px 20px 50px #000;
+}
+.enroll_form .form:hover {
+  background-color: #000;
+  color: #ffffff;
+  box-shadow: 10px 20px 80px #000;
+}
+.enroll_form .form input, .enroll_form .form select {
+  background-color: rgb(221, 218, 218);
+}
+.enroll_form .form button[type=submit] {
+  width: 100%;
+}
+
+.footer_section {
+  text-align: center;
+  padding: 50px 20px;
+  box-sizing: border-box;
+  background-color: #2F3645;
+}
+.footer_section .social_links {
+  color: #EEEDEB;
+}
+.footer_section .social_links h5 {
+  margin-right: 20px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.footer_section .social_links .social_icons a {
+  color: #EEEDEB;
+  font-size: 20px;
+  padding: 10px;
+}
+.footer_section p {
+  font-size: 20px;
+  font-weight: 400;
+  color: #ffffff;
+}/*# sourceMappingURL=style.css.map */
